@@ -1,0 +1,15 @@
+D:\Pixelfield\C#Learning\ConsoleCalculator\ConsoleCalculator\bin\Debug\net6.0\ConsoleCalculator.exe
+D:\Pixelfield\C#Learning\ConsoleCalculator\ConsoleCalculator\bin\Debug\net6.0\ConsoleCalculator.deps.json
+D:\Pixelfield\C#Learning\ConsoleCalculator\ConsoleCalculator\bin\Debug\net6.0\ConsoleCalculator.runtimeconfig.json
+D:\Pixelfield\C#Learning\ConsoleCalculator\ConsoleCalculator\bin\Debug\net6.0\ConsoleCalculator.dll
+D:\Pixelfield\C#Learning\ConsoleCalculator\ConsoleCalculator\bin\Debug\net6.0\ConsoleCalculator.pdb
+D:\Pixelfield\C#Learning\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.csproj.AssemblyReference.cache
+D:\Pixelfield\C#Learning\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pixelfield\C#Learning\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.AssemblyInfoInputs.cache
+D:\Pixelfield\C#Learning\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.AssemblyInfo.cs
+D:\Pixelfield\C#Learning\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.csproj.CoreCompileInputs.cache
+D:\Pixelfield\C#Learning\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.dll
+D:\Pixelfield\C#Learning\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\refint\ConsoleCalculator.dll
+D:\Pixelfield\C#Learning\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.pdb
+D:\Pixelfield\C#Learning\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.genruntimeconfig.cache
+D:\Pixelfield\C#Learning\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ref\ConsoleCalculator.dll
