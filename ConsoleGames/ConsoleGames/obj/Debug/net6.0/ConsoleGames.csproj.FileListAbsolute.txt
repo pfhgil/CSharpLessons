@@ -1,0 +1,15 @@
+D:\Pixelfield\C#Learning\ConsoleGames\ConsoleGames\bin\Debug\net6.0\ConsoleGames.exe
+D:\Pixelfield\C#Learning\ConsoleGames\ConsoleGames\bin\Debug\net6.0\ConsoleGames.deps.json
+D:\Pixelfield\C#Learning\ConsoleGames\ConsoleGames\bin\Debug\net6.0\ConsoleGames.runtimeconfig.json
+D:\Pixelfield\C#Learning\ConsoleGames\ConsoleGames\bin\Debug\net6.0\ConsoleGames.dll
+D:\Pixelfield\C#Learning\ConsoleGames\ConsoleGames\bin\Debug\net6.0\ConsoleGames.pdb
+D:\Pixelfield\C#Learning\ConsoleGames\ConsoleGames\obj\Debug\net6.0\ConsoleGames.csproj.AssemblyReference.cache
+D:\Pixelfield\C#Learning\ConsoleGames\ConsoleGames\obj\Debug\net6.0\ConsoleGames.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pixelfield\C#Learning\ConsoleGames\ConsoleGames\obj\Debug\net6.0\ConsoleGames.AssemblyInfoInputs.cache
+D:\Pixelfield\C#Learning\ConsoleGames\ConsoleGames\obj\Debug\net6.0\ConsoleGames.AssemblyInfo.cs
+D:\Pixelfield\C#Learning\ConsoleGames\ConsoleGames\obj\Debug\net6.0\ConsoleGames.csproj.CoreCompileInputs.cache
+D:\Pixelfield\C#Learning\ConsoleGames\ConsoleGames\obj\Debug\net6.0\ConsoleGames.dll
+D:\Pixelfield\C#Learning\ConsoleGames\ConsoleGames\obj\Debug\net6.0\refint\ConsoleGames.dll
+D:\Pixelfield\C#Learning\ConsoleGames\ConsoleGames\obj\Debug\net6.0\ConsoleGames.pdb
+D:\Pixelfield\C#Learning\ConsoleGames\ConsoleGames\obj\Debug\net6.0\ConsoleGames.genruntimeconfig.cache
+D:\Pixelfield\C#Learning\ConsoleGames\ConsoleGames\obj\Debug\net6.0\ref\ConsoleGames.dll
