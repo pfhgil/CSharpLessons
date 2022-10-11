@@ -1,0 +1,15 @@
+D:\Pixelfield\C#Learning\Piano\Piano\bin\Debug\net6.0\Piano.exe
+D:\Pixelfield\C#Learning\Piano\Piano\bin\Debug\net6.0\Piano.deps.json
+D:\Pixelfield\C#Learning\Piano\Piano\bin\Debug\net6.0\Piano.runtimeconfig.json
+D:\Pixelfield\C#Learning\Piano\Piano\bin\Debug\net6.0\Piano.dll
+D:\Pixelfield\C#Learning\Piano\Piano\bin\Debug\net6.0\Piano.pdb
+D:\Pixelfield\C#Learning\Piano\Piano\obj\Debug\net6.0\Piano.csproj.AssemblyReference.cache
+D:\Pixelfield\C#Learning\Piano\Piano\obj\Debug\net6.0\Piano.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pixelfield\C#Learning\Piano\Piano\obj\Debug\net6.0\Piano.AssemblyInfoInputs.cache
+D:\Pixelfield\C#Learning\Piano\Piano\obj\Debug\net6.0\Piano.AssemblyInfo.cs
+D:\Pixelfield\C#Learning\Piano\Piano\obj\Debug\net6.0\Piano.csproj.CoreCompileInputs.cache
+D:\Pixelfield\C#Learning\Piano\Piano\obj\Debug\net6.0\Piano.dll
+D:\Pixelfield\C#Learning\Piano\Piano\obj\Debug\net6.0\refint\Piano.dll
+D:\Pixelfield\C#Learning\Piano\Piano\obj\Debug\net6.0\Piano.pdb
+D:\Pixelfield\C#Learning\Piano\Piano\obj\Debug\net6.0\Piano.genruntimeconfig.cache
+D:\Pixelfield\C#Learning\Piano\Piano\obj\Debug\net6.0\ref\Piano.dll
