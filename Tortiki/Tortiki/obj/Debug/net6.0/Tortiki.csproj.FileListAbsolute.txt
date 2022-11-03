@@ -1,0 +1,15 @@
+D:\Pixelfield\C#Learning\Tortiki\Tortiki\bin\Debug\net6.0\Tortiki.exe
+D:\Pixelfield\C#Learning\Tortiki\Tortiki\bin\Debug\net6.0\Tortiki.deps.json
+D:\Pixelfield\C#Learning\Tortiki\Tortiki\bin\Debug\net6.0\Tortiki.runtimeconfig.json
+D:\Pixelfield\C#Learning\Tortiki\Tortiki\bin\Debug\net6.0\Tortiki.dll
+D:\Pixelfield\C#Learning\Tortiki\Tortiki\bin\Debug\net6.0\Tortiki.pdb
+D:\Pixelfield\C#Learning\Tortiki\Tortiki\obj\Debug\net6.0\Tortiki.csproj.AssemblyReference.cache
+D:\Pixelfield\C#Learning\Tortiki\Tortiki\obj\Debug\net6.0\Tortiki.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pixelfield\C#Learning\Tortiki\Tortiki\obj\Debug\net6.0\Tortiki.AssemblyInfoInputs.cache
+D:\Pixelfield\C#Learning\Tortiki\Tortiki\obj\Debug\net6.0\Tortiki.AssemblyInfo.cs
+D:\Pixelfield\C#Learning\Tortiki\Tortiki\obj\Debug\net6.0\Tortiki.csproj.CoreCompileInputs.cache
+D:\Pixelfield\C#Learning\Tortiki\Tortiki\obj\Debug\net6.0\Tortiki.dll
+D:\Pixelfield\C#Learning\Tortiki\Tortiki\obj\Debug\net6.0\refint\Tortiki.dll
+D:\Pixelfield\C#Learning\Tortiki\Tortiki\obj\Debug\net6.0\Tortiki.pdb
+D:\Pixelfield\C#Learning\Tortiki\Tortiki\obj\Debug\net6.0\Tortiki.genruntimeconfig.cache
+D:\Pixelfield\C#Learning\Tortiki\Tortiki\obj\Debug\net6.0\ref\Tortiki.dll
