@@ -18,10 +18,8 @@
             } else {
                 Console.WriteLine("Введите путь, по которому хотите открыть файл с описанием прямоугольников (ничего не вводите и нажмите Enter чтобы выйти):"); 
                 List<Rectangle> rectangles = Serializer.LoadAndDeserializeRectangles(Console.ReadLine());
-                if(rectangles != null) {
-                    Program.RectanglesWindow.Rectangles.Clear();
-                    Program.RectanglesWindow.Rectangles.AddRange(rectangles);
-                }
+                Program.RectanglesWindow.Rectangles.Clear();
+                Program.RectanglesWindow.Rectangles.AddRange(rectangles);
             }
 
             Console.Clear();
