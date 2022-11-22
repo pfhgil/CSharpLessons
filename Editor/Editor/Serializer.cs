@@ -37,7 +37,7 @@ namespace Editor
         public static List<Rectangle> LoadAndDeserializeRectangles(string path)
         {
             List<Rectangle> rectangles = new List<Rectangle>();
-            if (path == "") return null;
+            if (path == "") return rectangles;
 
             string extension = Path.GetExtension(path);
 
