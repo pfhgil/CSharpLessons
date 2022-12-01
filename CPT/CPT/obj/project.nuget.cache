@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "aIT+S2qCC45k1LORlCSscGSSbq153U1SbPkTJTHdHGvjzcZ4S2NViN4P1RHG4yiDkT99l1gJ7eD0n4QygkNBdQ==",
+  "success": true,
+  "projectFilePath": "D:\\Pixelfield\\C#Learning\\CPT\\CPT\\CPT.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\stuka\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

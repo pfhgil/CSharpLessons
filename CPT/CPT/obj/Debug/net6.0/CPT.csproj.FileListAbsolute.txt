@@ -1,0 +1,17 @@
+D:\Pixelfield\C#Learning\CPT\CPT\bin\Debug\net6.0\CPT.exe
+D:\Pixelfield\C#Learning\CPT\CPT\bin\Debug\net6.0\CPT.deps.json
+D:\Pixelfield\C#Learning\CPT\CPT\bin\Debug\net6.0\CPT.runtimeconfig.json
+D:\Pixelfield\C#Learning\CPT\CPT\bin\Debug\net6.0\CPT.dll
+D:\Pixelfield\C#Learning\CPT\CPT\bin\Debug\net6.0\CPT.pdb
+D:\Pixelfield\C#Learning\CPT\CPT\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Pixelfield\C#Learning\CPT\CPT\obj\Debug\net6.0\CPT.csproj.AssemblyReference.cache
+D:\Pixelfield\C#Learning\CPT\CPT\obj\Debug\net6.0\CPT.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pixelfield\C#Learning\CPT\CPT\obj\Debug\net6.0\CPT.AssemblyInfoInputs.cache
+D:\Pixelfield\C#Learning\CPT\CPT\obj\Debug\net6.0\CPT.AssemblyInfo.cs
+D:\Pixelfield\C#Learning\CPT\CPT\obj\Debug\net6.0\CPT.csproj.CoreCompileInputs.cache
+D:\Pixelfield\C#Learning\CPT\CPT\obj\Debug\net6.0\CPT.csproj.CopyComplete
+D:\Pixelfield\C#Learning\CPT\CPT\obj\Debug\net6.0\CPT.dll
+D:\Pixelfield\C#Learning\CPT\CPT\obj\Debug\net6.0\refint\CPT.dll
+D:\Pixelfield\C#Learning\CPT\CPT\obj\Debug\net6.0\CPT.pdb
+D:\Pixelfield\C#Learning\CPT\CPT\obj\Debug\net6.0\CPT.genruntimeconfig.cache
+D:\Pixelfield\C#Learning\CPT\CPT\obj\Debug\net6.0\ref\CPT.dll
