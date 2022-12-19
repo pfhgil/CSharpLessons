@@ -1,0 +1,15 @@
+D:\Pixelfield\CSharp\InformationSystem\InformationSystem\InformationSystem\bin\Debug\net6.0\InformationSystem.exe
+D:\Pixelfield\CSharp\InformationSystem\InformationSystem\InformationSystem\bin\Debug\net6.0\InformationSystem.deps.json
+D:\Pixelfield\CSharp\InformationSystem\InformationSystem\InformationSystem\bin\Debug\net6.0\InformationSystem.runtimeconfig.json
+D:\Pixelfield\CSharp\InformationSystem\InformationSystem\InformationSystem\bin\Debug\net6.0\InformationSystem.dll
+D:\Pixelfield\CSharp\InformationSystem\InformationSystem\InformationSystem\bin\Debug\net6.0\InformationSystem.pdb
+D:\Pixelfield\CSharp\InformationSystem\InformationSystem\InformationSystem\obj\Debug\net6.0\InformationSystem.csproj.AssemblyReference.cache
+D:\Pixelfield\CSharp\InformationSystem\InformationSystem\InformationSystem\obj\Debug\net6.0\InformationSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pixelfield\CSharp\InformationSystem\InformationSystem\InformationSystem\obj\Debug\net6.0\InformationSystem.AssemblyInfoInputs.cache
+D:\Pixelfield\CSharp\InformationSystem\InformationSystem\InformationSystem\obj\Debug\net6.0\InformationSystem.AssemblyInfo.cs
+D:\Pixelfield\CSharp\InformationSystem\InformationSystem\InformationSystem\obj\Debug\net6.0\InformationSystem.csproj.CoreCompileInputs.cache
+D:\Pixelfield\CSharp\InformationSystem\InformationSystem\InformationSystem\obj\Debug\net6.0\InformationSystem.dll
+D:\Pixelfield\CSharp\InformationSystem\InformationSystem\InformationSystem\obj\Debug\net6.0\refint\InformationSystem.dll
+D:\Pixelfield\CSharp\InformationSystem\InformationSystem\InformationSystem\obj\Debug\net6.0\InformationSystem.pdb
+D:\Pixelfield\CSharp\InformationSystem\InformationSystem\InformationSystem\obj\Debug\net6.0\InformationSystem.genruntimeconfig.cache
+D:\Pixelfield\CSharp\InformationSystem\InformationSystem\InformationSystem\obj\Debug\net6.0\ref\InformationSystem.dll
