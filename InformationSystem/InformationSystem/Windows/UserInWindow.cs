@@ -50,10 +50,6 @@ namespace InformationSystem.Windows
         {
             for (int i = 0; i < _info.Length; i++)
             {
-                if(i == _cursorY)
-                {
-                    _cursorMinX = _info[i].Length;
-                }
                 Console.WriteLine(_info[i]);
             }
 
@@ -70,18 +66,22 @@ namespace InformationSystem.Windows
             ConsoleKeyInfo keyInfo = Console.ReadKey(false);
             CalculateCursorPos(keyInfo.Key, _info);
 
+            _cursorMinX = _info[_cursorY].Length;
             // какаха
-            if(_cursorY == 0)
+            if (_cursorY == 0)
             {
-                _currentUser.name.Insert(_cursorX - _cursorMinX, keyInfo.KeyChar);
+                _cursorX = Math.Clamp(_cursorX, _cursorMinX, _cursorMinX + _currentUser.name.Capacity + 1);
+                _currentUser.name.Insert(_cursorX - _cursorMinX, keyInfo.KeyChar);  
             } 
-            else if(_cursorY == 1)
+            else if(_cursorY == 1) 
             {
-                _currentUser.password.Insert(_cursorX - _cursorMinX, keyInfo.KeyChar);
+                _cursorX = Math.Clamp(_cursorX, _cursorMinX, _cursorMinX + _currentUser.password.Capacity + 1);
+                _currentUser.password.Insert(_cursorX - _cursorMinX, keyInfo.KeyChar);        
             }
             else if(_cursorY == 3 && _mode == Mode.SIGNUP)
             {
-                _currentUser.name.Insert(_cursorX - _cursorMinX, keyInfo.KeyChar);
+                //_cursorX = Math.Clamp(_cursorX, _cursorMinX, _cursorMinX + _currentUser.password.Length + 1);
+                _currentUser.name.Insert(_cursorX, keyInfo.KeyChar);
             }
 
             Clear();
