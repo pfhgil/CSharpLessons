@@ -51,15 +51,22 @@ namespace InformationSystem.Windows
                 case ConsoleKey.RightArrow:
                     _cursorX++;
                     break;
-
-                case ConsoleKey n when n > ConsoleKey.A && n < ConsoleKey.Z:
-                    _cursorX++;
-                    _cursorMaxX++;
-                    break;
             }
 
-            _cursorY = Math.Clamp(_cursorY, _cursorMinY, _cursorMinY + infoArr.Length - 1);
-            _cursorX = Math.Clamp(_cursorX, _cursorMinX, _cursorMaxX + infoArr[_cursorY].Length);
+            if (infoArr.Length > 0)
+            {
+                _cursorY = Math.Clamp(_cursorY, _cursorMinY, _cursorMinY + infoArr.Length - 1);
+                _cursorX = Math.Clamp(_cursorX, _cursorMinX, _cursorMaxX + infoArr[_cursorY].Length);
+            }
+        }
+
+        protected void PrintError(string msg, int posY)
+        {
+            int _lastCurX = Console.CursorLeft;
+            int _lastCurY = Console.CursorTop;
+            Console.SetCursorPosition(0, posY);
+            Console.WriteLine(msg);
+            Console.SetCursorPosition(_lastCurX, _lastCurY);
         }
     }
 }

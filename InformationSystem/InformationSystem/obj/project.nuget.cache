@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "HtUsBSgHmIvHj6JkKNAyV0EMU7NZwYphtXckRkvME+bGEzpnL7dhwMyBZd+KNI6Y14sOMETjOPXQvDLRgx62dA==",
+  "dgSpecHash": "WHLH/uQDXhLQaSK3jZlcGp10+3sZY2VCKHbhza/SgTHUnNLqal8ZvexOSTFLszN2OaBdoX87kKzwWduV4xvSfw==",
   "success": true,
-  "projectFilePath": "D:\\Pixelfield\\C#Learning\\CSharpLessons\\InformationSystem\\InformationSystem\\InformationSystem.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Pixelfield\\CSharpLessons\\InformationSystem\\InformationSystem\\InformationSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\stuka\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
+    "C:\\Users\\stuka\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

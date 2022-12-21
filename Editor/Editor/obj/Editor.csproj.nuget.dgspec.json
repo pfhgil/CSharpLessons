@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Pixelfield\\C#Learning\\Editor\\Editor\\Editor.csproj": {}
+    "D:\\Pixelfield\\CSharpLessons\\Editor\\Editor\\Editor.csproj": {}
   },
   "projects": {
-    "D:\\Pixelfield\\C#Learning\\Editor\\Editor\\Editor.csproj": {
+    "D:\\Pixelfield\\CSharpLessons\\Editor\\Editor\\Editor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pixelfield\\C#Learning\\Editor\\Editor\\Editor.csproj",
+        "projectUniqueName": "D:\\Pixelfield\\CSharpLessons\\Editor\\Editor\\Editor.csproj",
         "projectName": "Editor",
-        "projectPath": "D:\\Pixelfield\\C#Learning\\Editor\\Editor\\Editor.csproj",
+        "projectPath": "D:\\Pixelfield\\CSharpLessons\\Editor\\Editor\\Editor.csproj",
         "packagesPath": "C:\\Users\\stuka\\.nuget\\packages\\",
-        "outputPath": "D:\\Pixelfield\\C#Learning\\Editor\\Editor\\obj\\",
+        "outputPath": "D:\\Pixelfield\\CSharpLessons\\Editor\\Editor\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\stuka\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

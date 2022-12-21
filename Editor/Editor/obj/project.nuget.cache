@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7lQoPDeS8rmaYmwNbhkGvXhgDHvbS38GPi2hcbJRyqpTNm8Rc/Ds+mjJ3HJ+iuS22EnLagBwR/yqArSjtN5fcg==",
+  "dgSpecHash": "Zc67Aa8hKIX5bTzU7hUm4F2Brl/INkKAyMrfVYsO7jNLrM6Knt9QlEXiaSa6yE6EzrXIPFKWqYhkZSnWUPeDaA==",
   "success": true,
-  "projectFilePath": "D:\\Pixelfield\\C#Learning\\Editor\\Editor\\Editor.csproj",
+  "projectFilePath": "D:\\Pixelfield\\CSharpLessons\\Editor\\Editor\\Editor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\stuka\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
