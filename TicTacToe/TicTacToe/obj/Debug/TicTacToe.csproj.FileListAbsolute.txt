@@ -1,0 +1,16 @@
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe.config
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\bin\Debug\TicTacToe.pdb
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.AssemblyReference.cache
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.SuggestedBindingRedirects.cache
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\obj\Debug\MainWindow.g.cs
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\obj\Debug\App.g.cs
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\obj\Debug\TicTacToe_MarkupCompile.cache
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\obj\Debug\TicTacToe_MarkupCompile.lref
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\obj\Debug\MainWindow.baml
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\obj\Debug\TicTacToe.g.resources
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Properties.Resources.resources
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.cache
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
+D:\Техникум\c#\practice_1\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb
