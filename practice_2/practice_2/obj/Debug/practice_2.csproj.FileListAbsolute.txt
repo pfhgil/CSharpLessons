@@ -1,0 +1,16 @@
+D:\Техникум\c#\practice_2\practice_2\bin\Debug\practice_2.exe.config
+D:\Техникум\c#\practice_2\practice_2\bin\Debug\practice_2.exe
+D:\Техникум\c#\practice_2\practice_2\bin\Debug\practice_2.pdb
+D:\Техникум\c#\practice_2\practice_2\obj\Debug\practice_2.csproj.AssemblyReference.cache
+D:\Техникум\c#\practice_2\practice_2\obj\Debug\practice_2.csproj.SuggestedBindingRedirects.cache
+D:\Техникум\c#\practice_2\practice_2\obj\Debug\MainWindow.g.cs
+D:\Техникум\c#\practice_2\practice_2\obj\Debug\App.g.cs
+D:\Техникум\c#\practice_2\practice_2\obj\Debug\practice_2_MarkupCompile.cache
+D:\Техникум\c#\practice_2\practice_2\obj\Debug\practice_2_MarkupCompile.lref
+D:\Техникум\c#\practice_2\practice_2\obj\Debug\MainWindow.baml
+D:\Техникум\c#\practice_2\practice_2\obj\Debug\practice_2.g.resources
+D:\Техникум\c#\practice_2\practice_2\obj\Debug\practice_2.Properties.Resources.resources
+D:\Техникум\c#\practice_2\practice_2\obj\Debug\practice_2.csproj.GenerateResource.cache
+D:\Техникум\c#\practice_2\practice_2\obj\Debug\practice_2.csproj.CoreCompileInputs.cache
+D:\Техникум\c#\practice_2\practice_2\obj\Debug\practice_2.exe
+D:\Техникум\c#\practice_2\practice_2\obj\Debug\practice_2.pdb
