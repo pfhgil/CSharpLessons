@@ -5,33 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="450" ResizeMode="NoResize">
+        Title="MainWindow" Height="450" Width="450">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Button x:Name="F11" Grid.Column="2" Content="" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="87" Width="90" Click="Button_Click"/>
-        <Button x:Name="F12" Grid.Column="3" Content="" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="87" Width="90" Click="Button_Click"/>
-        <Button x:Name="F01" Grid.Column="2" Content="" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="87" Width="90" Click="Button_Click"/>
-        <Button x:Name="F02" Grid.Column="3" Content="" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="87" Width="90" Click="Button_Click"/>
-        <Button x:Name="F21" Grid.Column="2" Content="" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="87" Width="90" Click="Button_Click"/>
-        <Button x:Name="F10" Grid.Column="1" Content="" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="87" Width="90" Click="Button_Click"/>
-        <Button x:Name="F00" Grid.Column="1" Content="" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="87" Width="90" Click="Button_Click"/>
-        <Button x:Name="F20" Grid.Column="1" Content="" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="87" Width="90" Click="Button_Click"/>
-        <Button x:Name="F22" Grid.Column="3" Content="" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="87" Width="90" Click="Button_Click"/>
-        <TextBlock HorizontalAlignment="Right" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.Column="1" Height="48" RenderTransformOrigin="0.502,-0.007" Grid.ColumnSpan="3" Margin="0,0,10,0"><Run Text="Привет, это крестики"/><Run Text="-"/><Run Text="нолики!"/><LineBreak/><Run Language="ru-ru" Text="Нажми на любое поле, чтобы начать игру."/></TextBlock>
+        <Button x:Name="F11" Grid.Column="2" Content="" Grid.Row="2" Click="Button_Click"/>
+        <Button x:Name="F12" Grid.Column="3" Content="" Grid.Row="2" Click="Button_Click"/>
+        <Button x:Name="F01" Grid.Column="2" Content="" Grid.Row="1" Click="Button_Click"/>
+        <Button x:Name="F02" Grid.Column="3" Content="" Grid.Row="1" Click="Button_Click"/>
+        <Button x:Name="F21" Grid.Column="2" Content="" Grid.Row="3" Click="Button_Click"/>
+        <Button x:Name="F10" Grid.Column="1" Content="" Grid.Row="2" Click="Button_Click"/>
+        <Button x:Name="F00" Grid.Column="1" Content="" Grid.Row="1" Click="Button_Click"/>
+        <Button x:Name="F20" Grid.Column="1" Content="" Grid.Row="3" Click="Button_Click"/>
+        <Button x:Name="F22" Grid.Column="3" Content="" Grid.Row="3" Click="Button_Click"/>
+
+        <TextBlock TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Height="48" RenderTransformOrigin="0.502,-0.007" Grid.ColumnSpan="3" Margin="10,0,10,0"><Run Text="Привет, это крестики"/><Run Text="-"/><Run Text="нолики!"/><LineBreak/><Run Language="ru-ru" Text="Нажми на любое поле, чтобы начать игру."/></TextBlock>
         <Label x:Name="SideLabel" Grid.ColumnSpan="5" Content="Вы играете за: " HorizontalAlignment="Center" Margin="0,53,0,0" VerticalAlignment="Top"/>
         <Button x:Name="RestartButton" Grid.Column="2" Content="Рестарт" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Click="Button_Click"/>
     </Grid>

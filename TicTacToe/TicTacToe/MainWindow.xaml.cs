@@ -295,5 +295,15 @@ namespace TicTacToe
 
            //essageBox.Show(def.ToString());
         }
+
+        private void F10_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
