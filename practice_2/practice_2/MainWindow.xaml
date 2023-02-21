@@ -36,10 +36,18 @@
             </Button.Content>
         </Button>
 
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="13" Grid.RowSpan="18" Margin="0,0,20,0">
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Background="Black" Margin="0,0,0,0" />
+        </StackPanel>
+
+        <ListBox x:Name="NotesListBox" Grid.ColumnSpan="14" Grid.RowSpan="18" Grid.Row="1" SelectionChanged="NotesListBox_SelectionChanged"/>
+
+        <DatePicker x:Name="NotesDatePicker" Grid.Column="3" Grid.RowSpan="1" Grid.ColumnSpan="18" BorderThickness="0,0,0,0" SelectedDateChanged="NotesDatePicked_SelectedDateChanged"/>
+        
+        <TextBox x:Name="NoteDescriptionTextBox" TextWrapping="Wrap" Text="" Grid.Column="14" Grid.ColumnSpan="5" Margin="0,0,0,-1" Grid.RowSpan="12" Grid.Row="7" TextChanged="NoteDescriptionTextBox_TextChanged"/>
+        <TextBox x:Name="NoteNameTextBox" TextWrapping="Wrap" Text="" Grid.Column="14" Grid.ColumnSpan="5" Margin="0,0,0,-1" Grid.RowSpan="6" Grid.Row="1" TextChanged="NoteNameTextBox_TextChanged"/>
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -62,9 +70,6 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
