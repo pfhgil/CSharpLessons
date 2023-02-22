@@ -10,7 +10,7 @@ namespace practice_2
     {
         public string name = "New Note";
 
-        public string description = "No description here.";
+        public string description = "Write description here.";
 
         // время, на которое оформлена заметка
         public DateTime dateTime = new DateTime();

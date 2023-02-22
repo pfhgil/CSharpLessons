@@ -14,3 +14,6 @@ D:\Техникум\c#\practice_2\practice_2\obj\Debug\practice_2.csproj.Generat
 D:\Техникум\c#\practice_2\practice_2\obj\Debug\practice_2.csproj.CoreCompileInputs.cache
 D:\Техникум\c#\practice_2\practice_2\obj\Debug\practice_2.exe
 D:\Техникум\c#\practice_2\practice_2\obj\Debug\practice_2.pdb
+D:\Техникум\c#\practice_2\practice_2\bin\Debug\Newtonsoft.Json.dll
+D:\Техникум\c#\practice_2\practice_2\bin\Debug\Newtonsoft.Json.xml
+D:\Техникум\c#\practice_2\practice_2\obj\Debug\practice_2.csproj.CopyComplete

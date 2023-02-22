@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -30,9 +31,15 @@ namespace practice_2
 
         private Note currentSelectedNote;
 
+        private Thread handleChangesThread;
+
+        private string pathToNotes = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/notes.json";
+
         public MainWindow()
         {
             InitializeComponent();
+
+            notes = Serializer.Deserialize<List<Note>>(pathToNotes);
 
             notesListBox = (ListBox)this.FindName("NotesListBox");
             notesDatePicker = (DatePicker)this.FindName("NotesDatePicker");
@@ -43,19 +50,35 @@ namespace practice_2
             SetNoteEditingEnabled(false);
 
             notesDatePicker.SelectedDate = DateTime.Now;
+
+            handleChangesThread = new Thread(() => HandleChanges());
+            handleChangesThread.Start();
+        }
+
+        private void MainWindow_Closed(object sender, EventArgs e)
+        {
+            handleChangesThread.Abort();
+            Serializer.Serialize(pathToNotes, notes);
+        }
+
+        private void HandleChanges()
+        {
+            while(true)
+            {
+                Thread.Sleep(5000);
+
+                Serializer.Serialize(pathToNotes, notes);
+            }
         }
 
         private void AddNoteButton_Click(object sender, RoutedEventArgs e)
         {    
             Note newNote = new Note();
-            newNote.name = "гавнище";
-            newNote.description = "гавнецоооо";
             newNote.dateTime = notesDatePicker.SelectedDate.Value;   
             
             notes.Add(newNote);
  
-            notesListBox.Items.Add(newNote);
-            
+            notesListBox.Items.Add(newNote);  
         }
 
         private void DeleteNoteButton_Click(object sender, RoutedEventArgs e)
@@ -73,11 +96,6 @@ namespace practice_2
                 idx = 0;
             }
             notesListBox.SelectedIndex = idx;
-
-        }
-
-        private void EditNoteButton_Click(object sender, RoutedEventArgs e)
-        {
 
         }
 
