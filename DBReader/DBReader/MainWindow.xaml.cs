@@ -70,8 +70,7 @@ namespace DBReader
 
         private void DropTable(string name)
         {
-            string deleteCom = 
-                "DELETE FROM " + name;
+            string deleteCom = "DELETE FROM " + name;
             SqlCommand cmd = new SqlCommand(deleteCom, sqlConnection);
             cmd.ExecuteNonQuery();
 
@@ -84,14 +83,14 @@ namespace DBReader
 
         private void PreviousTableButton_Click(object sender, RoutedEventArgs e)
         {
-            IncrementCurrentTable(-1);
+            IncrementCurrentTable(-1);           
         }
 
         private void IncrementCurrentTable(int inc)
         {
             currentTableIdx += inc;
 
-            currentTableIdx = Math.Max(0, Math.Min(currentTableIdx, 1));
+            currentTableIdx = Math.Max(0, Math.Min(currentTableIdx, dataSets.Length - 1));
 
             dbDataGrid.ItemsSource = (IEnumerable) dataSets[currentTableIdx];
         }
