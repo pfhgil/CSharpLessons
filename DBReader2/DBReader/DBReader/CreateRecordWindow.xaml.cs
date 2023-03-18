@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using DBReader.DataSetTableAdapters;
+using System;
 using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace DBReader
 {
@@ -26,11 +15,12 @@ namespace DBReader
 
         private TextBlock logTextBlock;
 
-        private DataTable originalDataTable; 
         private DataTable editingTable;
 
         // reference to main window
         public MainWindow mainWindow;
+
+        private object currentTableAdapter;
 
         public CreateRecordWindow()
         {
@@ -41,71 +31,37 @@ namespace DBReader
             logTextBlock = (TextBlock)FindName("LogTextBlock");
         }
 
-        // топчик
         private void AddRecordButton_Click(object sender, RoutedEventArgs e)
         {
-            string sqlQuery = "IF(OBJECTPROPERTY(OBJECT_ID('dbo." + 
-                editingTable.TableName +
-                "'), 'TableHasIdentity') = 1) SET IDENTITY_INSERT dbo." + editingTable.TableName + " ON\n" +
-                "INSERT INTO dbo." + editingTable.TableName + " (";
-
-            for(int i = 0; i < editingTable.Columns.Count; i++)
-            {
-                var item = editingTable.Columns[i];
-
-                if (i < editingTable.Columns.Count - 1)
-                {
-                    sqlQuery += FormatItem(item) + ", ";
-                }
-                else
-                {
-                    sqlQuery += FormatItem(item) + ") VALUES (";
-                }
-            }
-
-            for (int i = 0; i < editingTable.Rows[0].ItemArray.Length; i++)
-            {
-                var item = editingTable.Rows[0].ItemArray[i];
-
-                if(i < editingTable.Rows[0].ItemArray.Length - 1)
-                {
-                    sqlQuery += FormatItem(item) + ", ";
-                }
-                else
-                {
-                    sqlQuery += FormatItem(item) + ")";
-                }
-            }
-
-            MessageBox.Show(sqlQuery, "Query text");
-
             try
             {
-                SqlCommand cmd = new SqlCommand(sqlQuery, mainWindow.sqlConnection);
-                cmd.ExecuteNonQuery();
-
-                originalDataTable.ImportRow(editingTable.Rows[0]);
+                if (currentTableAdapter is PostTableAdapter postTableAdapter)
+                {
+                    postTableAdapter.InsertPost((int)editingTable.Rows[0][0], (string)editingTable.Rows[0][1]);
+                }
+                else if (currentTableAdapter is StaffTableAdapter staffTableAdapter)
+                {
+                    staffTableAdapter.InsertEmployee((string)editingTable.Rows[0][0], (int) editingTable.Rows[0][1]);
+                }
 
                 logTextBlock.Text = "No errors";
-            } 
+            }
             catch (Exception ex)
             {
                 logTextBlock.Text = ex.Message;
-            }  
+            }
 
             mainWindow.UpdateDataGrid();
         }
 
-        private string FormatItem(object item)
+        public void CreateEditor(object tableAdapter)
         {
-            return item is string ? "'" + item + "'" : "" + item;
-        }
+            DataTable dataTable = mainWindow.GetDataTable(tableAdapter);
+            if (dataTable == null) return;
 
-        public void CreateEditor(DataTable dataTable)
-        {
+            currentTableAdapter = tableAdapter;
+
             logTextBlock.Text = "No errors";
-
-            originalDataTable = dataTable;
 
             newRecordGrid.Columns.Clear();  
 
@@ -114,6 +70,8 @@ namespace DBReader
 
             foreach (DataColumn dc in dataTable.Columns)
             {
+                if (dc.ColumnName == dataTable.PrimaryKey[0].ColumnName && dataTable.PrimaryKey[0].AutoIncrement) continue;
+
                 editingTable.Columns.Add(dc.ColumnName, dc.DataType);
             }
 

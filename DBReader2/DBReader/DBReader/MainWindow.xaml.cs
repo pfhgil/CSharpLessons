@@ -2,21 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Common;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 using DBReader.DataSetTableAdapters;
 
@@ -34,7 +22,7 @@ namespace DBReader
 
         public SqlConnection sqlConnection { get; } = new SqlConnection("Initial Catalog=master;Integrated Security=True;");
 
-        private DataTable[] dataSets = new DataTable[2];
+        private List<object> adapters = new List<object>();
 
         private int currentTableIdx = 0;
 
@@ -51,11 +39,11 @@ namespace DBReader
             DropTable("Staff");
             DropTable("Post");  
 
-            postTableAdapter.Insert(1, "Junior developer");
-            postTableAdapter.Insert(2, "Middle developer");
-            postTableAdapter.Insert(3, "Senior developer");
+            postTableAdapter.InsertPost(1, "Junior developer");
+            postTableAdapter.InsertPost(2, "Middle developer");
+            postTableAdapter.InsertPost(3, "Senior developer");
 
-            postTableAdapter.Insert(4, "Teamlead");
+            postTableAdapter.InsertPost(4, "Teamlead");
 
             staffTableAdapter.Insert("Дмитрий", 2);
             staffTableAdapter.Insert("Иван", 1);
@@ -63,18 +51,35 @@ namespace DBReader
             staffTableAdapter.Insert("Иван", 2);
             staffTableAdapter.Insert("Дмитрий", 4);
 
-            dataSets[0] = postTableAdapter.GetData();
-            dataSets[1] = staffTableAdapter.GetData();
+            adapters.Add(postTableAdapter);
+            adapters.Add(staffTableAdapter);
 
             dbDataGrid.ItemsSource = postTableAdapter.GetData();
 
             createRecordWindow.mainWindow = this;
         }
 
+        public DataTable GetDataTable(object tableAdapter)
+        {
+            DataTable dataTable = null;
+            if (tableAdapter is PostTableAdapter postTableAdapter)
+            {
+                dataTable = postTableAdapter.GetData();
+            }
+            else if (tableAdapter is StaffTableAdapter staffTableAdapter)
+            {
+                dataTable = staffTableAdapter.GetData();
+            }
+
+            return dataTable; 
+        }
 
         public void UpdateDataGrid()
         {
-            dbDataGrid.ItemsSource = (IEnumerable)dataSets[currentTableIdx];
+            DataTable dataTable = GetDataTable(adapters[currentTableIdx]);
+            if (dataTable == null) return;
+
+            dbDataGrid.ItemsSource = (IEnumerable)dataTable;
         }
 
         private void DropTable(string name)
@@ -98,14 +103,14 @@ namespace DBReader
         {
             currentTableIdx += inc;
 
-            currentTableIdx = Math.Max(0, Math.Min(currentTableIdx, dataSets.Length - 1));
+            currentTableIdx = Math.Max(0, Math.Min(currentTableIdx, adapters.Count - 1));
 
             UpdateDataGrid();
         }
 
         private void CreateRecordButton_Click(object sender, RoutedEventArgs e)
         {
-            createRecordWindow.CreateEditor(dataSets[currentTableIdx]);
+            createRecordWindow.CreateEditor(adapters[currentTableIdx]);
 
             createRecordWindow.Show();
         }
