@@ -1,0 +1,28 @@
+﻿<Window x:Class="DBReader.CreateRecordWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DBReader"
+        mc:Ignorable="d"
+        Title="CreateRecordWindow" Height="450" Width="600" Closing="CreateRecordWindow_Closing">
+    <Grid>
+        <Button x:Name="CloseWindowButton" Content="Закрыть" Grid.ColumnSpan="1" Grid.RowSpan="1" Grid.Column="0" Grid.Row="2" Click="CloseWindowButton_Click"/>
+        <Button x:Name="AddRecordButton" Content="Добавить" Grid.ColumnSpan="1" Grid.RowSpan="1" Grid.Column="2" Grid.Row="2" Click="AddRecordButton_Click"/>
+        <DataGrid x:Name="NewRecordGrid" Grid.ColumnSpan="3"/>
+        <TextBlock x:Name="LogTextBlock" HorizontalAlignment="Left" Grid.ColumnSpan="3" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height= "*"/>
+            <RowDefinition Height= "20"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width= "*"/>
+            <ColumnDefinition Width= "70"/>
+        </Grid.ColumnDefinitions>
+    </Grid>
+</Window>
