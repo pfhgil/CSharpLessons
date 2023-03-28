@@ -9,15 +9,15 @@
       Title="MaterialsSuppliersPage">
 
     <Grid>
-        <DataGrid x:Name="TableDataGrid" Grid.ColumnSpan="5" Grid.Column="0" Grid.Row="1"/>
+        <DataGrid x:Name="TableDataGrid" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="1" SelectionChanged="TableDataGrid_SelectionChanged"/>
 
-        <Button x:Name="NextTableButton" Grid.ColumnSpan="1" Grid.RowSpan="3" Grid.Column="3" Grid.Row="2" Click="NextTableButton_Click">
+        <Button x:Name="NextTableButton" Grid.ColumnSpan="1" Grid.RowSpan="4" Grid.Column="3" Grid.Row="2" Click="NextTableButton_Click">
             <Button.Content>
                 <Image Source="/icons/go_forward50.png"/>
             </Button.Content>
         </Button>
 
-        <Button x:Name="PreviousTableButton" Grid.ColumnSpan="1" Grid.RowSpan="3" Grid.Column="0" Grid.Row="2" Grid.IsSharedSizeScope="False" Click="PreviousTableButton_Click">
+        <Button x:Name="PreviousTableButton" Grid.ColumnSpan="1" Grid.RowSpan="4" Grid.Column="0" Grid.Row="2" Grid.IsSharedSizeScope="False" Click="PreviousTableButton_Click">
             <Button.Content>
                 <Image Source="/icons/go_back50.png" />
             </Button.Content>
@@ -25,15 +25,38 @@
 
 
         <Button x:Name="CreateRecordButton" Content="Добавить запись" Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="1" Grid.Row="2" Click="CreateRecordButton_Click"/>
-        <Button x:Name="EditRecordButton" Content="Изменить запись" Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="1" Grid.Row="3" Click="EditRecordButton_Click"/>
-        <Button x:Name="DeleteRecord" Content="Удалить запись" Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="1" Grid.Row="4" Click="DeleteRecordButton_Click"/>
-        <ScrollViewer Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="ExportTableButton" Content="Экспортировать таблицу" Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="1" Grid.Row="3" Click="ExportTableButton_Click"/>
+        <Button x:Name="ImportTableButton" Content="Импортировать таблицу" Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="1" Grid.Row="4" Click="ImportTableButton_Click"/>
+        <Button x:Name="DeleteRecord" Content="Удалить запись" Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="1" Grid.Row="5" Click="DeleteRecordButton_Click"/>
+
+        <ScrollViewer x:Name="EditScrollViewer" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height= "25"/>
+                    <RowDefinition Height= "*"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="5"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width= "*"/>
+                    <ColumnDefinition Width= "25"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="NameTextBox" Grid.Row="1" Grid.Column="1"/>
+
+                <Button x:Name="ApplyChangesButton" Content="Применить" Grid.Row="3" Grid.Column="1" Click="ApplyChangesButton_Click"/>
+            </Grid>
+        </ScrollViewer>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="0"/>
             <RowDefinition Height= "*"/>
             <RowDefinition Height="20"/>
-            <RowDefinition Height= "50"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 

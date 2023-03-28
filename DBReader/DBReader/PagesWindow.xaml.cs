@@ -17,7 +17,7 @@ namespace DBReader
     public partial class PagesWindow : Window
     {
         // ----------------------- user
-        private UserRole userRole = UserRole.ADMIN;
+        public UserRole userRole = UserRole.SELLER;
 
         // все адаптеры
         private List<Page> allPages = new List<Page>();
@@ -25,60 +25,57 @@ namespace DBReader
 
         private int currentPageIdx = 0;
 
-        // other windows
-        //private CreateRecordWindow createRecordWindow = new CreateRecordWindow();
+
+        // pages
+        public FactoriesPage FactoriesPage { get; } = new FactoriesPage();
+
+        public FurniturePage FurniturePage { get; } = new FurniturePage();
+        public FurnitureCarriersPage FurnitureCarriersPage { get; } = new FurnitureCarriersPage();
+        public FurnitureTypesPage FurnitureTypesPage { get; } = new FurnitureTypesPage();
+
+        public MachinesPage MachinesPage { get; } = new MachinesPage();
+
+        public MaterialsPage MaterialsPage { get; } = new MaterialsPage();
+        public MaterialsSuppliersPage MaterialsSuppliersPage { get; } = new MaterialsSuppliersPage();
+
+        public PostPage PostPage { get; } = new PostPage();
+
+        public ReceiptsPage ReceiptsPage { get; } = new ReceiptsPage();
+
+        public StaffPage StaffPage { get; } = new StaffPage();
 
         public PagesWindow()
         {
             InitializeComponent();
-            //sqlConnection.Open();
+        }
 
-            FactoriesPage factoriesPage = new FactoriesPage();
-            factoriesPage.pagesWindow = this;
+        public void LoadPages()
+        {
+            if (userRole == UserRole.ADMIN)
+            {
+                allPages.Add(FactoriesPage);
 
-            FurniturePage furniturePage = new FurniturePage();
-            furniturePage.pagesWindow = this;
+                allPages.Add(FurniturePage);
+                allPages.Add(FurnitureCarriersPage);
+                allPages.Add(FurnitureTypesPage);
 
-            FurnitureCarriersPage furnitureCarriersPage = new FurnitureCarriersPage();
-            furnitureCarriersPage.pagesWindow = this;
+                allPages.Add(MachinesPage);
 
-            FurnitureTypesPage furnitureTypesPage = new FurnitureTypesPage();
-            furnitureTypesPage.pagesWindow = this;
+                allPages.Add(MaterialsPage);
+                allPages.Add(MaterialsSuppliersPage);
 
-            MachinesPage machinesPage = new MachinesPage();
-            machinesPage.pagesWindow = this;
+                allPages.Add(PostPage);
 
-            MaterialsPage materialsPage = new MaterialsPage();
-            materialsPage.pagesWindow = this;
+                allPages.Add(ReceiptsPage);
 
-            MaterialsSuppliersPage materialsSuppliersPage = new MaterialsSuppliersPage();
-            materialsSuppliersPage.pagesWindow = this;
+                allPages.Add(StaffPage);
+            }
+            else if (userRole == UserRole.SELLER)
+            {
+                allPages.Add(ReceiptsPage);
+            }
 
-            PostPage postPage = new PostPage();
-            postPage.pagesWindow = this;
-
-            ReceiptsPage receiptsPage = new ReceiptsPage();
-            receiptsPage.pagesWindow = this;
-
-            StaffPage staffPage = new StaffPage();
-            staffPage.pagesWindow = this;
-
-            allPages.Add(factoriesPage);
-
-            allPages.Add(furniturePage);
-            allPages.Add(furnitureCarriersPage);
-            allPages.Add(furnitureTypesPage);
-
-            allPages.Add(machinesPage);
-
-            allPages.Add(materialsPage);
-            allPages.Add(materialsSuppliersPage);
-
-            allPages.Add(postPage);
-
-            allPages.Add(receiptsPage);
-
-            allPages.Add(staffPage);
+            ReceiptsPage.Init();
 
             PagesFrame.Content = allPages[0];
         }
@@ -89,76 +86,25 @@ namespace DBReader
 
             currentPageIdx = Math.Max(0, Math.Min(currentPageIdx, allPages.Count - 1));
 
+            FactoriesPage.TableDataGrid.ItemsSource = FactoriesPage.Adapter.GetData();
+
+            FurniturePage.TableDataGrid.ItemsSource = FurniturePage.Adapter.GetData();
+            FurnitureCarriersPage.TableDataGrid.ItemsSource = FurnitureCarriersPage.Adapter.GetData();
+            FurnitureTypesPage.TableDataGrid.ItemsSource = FurnitureTypesPage.Adapter.GetData();
+
+            MachinesPage.TableDataGrid.ItemsSource = MachinesPage.Adapter.GetData();
+
+            MaterialsPage.TableDataGrid.ItemsSource = MaterialsPage.Adapter.GetData();
+            MaterialsSuppliersPage.TableDataGrid.ItemsSource = MaterialsSuppliersPage.Adapter.GetData();
+
+            PostPage.TableDataGrid.ItemsSource = PostPage.Adapter.GetData();
+
+            ReceiptsPage.TableDataGrid.ItemsSource = ReceiptsPage.Adapter.GetData();
+            ReceiptsPage.AvailableFurnitureDataGrid.ItemsSource = FurniturePage.Adapter.GetData();
+
+            StaffPage.TableDataGrid.ItemsSource = StaffPage.Adapter.GetData();
+
             PagesFrame.Content = allPages[currentPageIdx];
-        }
-
-        private void CreateRecordButton_Click(object sender, RoutedEventArgs e)
-        {
-            //createRecordWindow.CreateEditor(adapters[currentTableIdx]);
-
-            //createRecordWindow.Show();
-        }
-
-        private void DeleteRecordButton_Click(object sender, RoutedEventArgs e)
-        {
-            /*
-            try
-            {
-                foreach (DataRowView drv in dbDataGrid.SelectedItems)
-                {
-                    if (adapters[currentTableIdx] is PostTableAdapter postTableAdapter)
-                    {
-                        postTableAdapter.DeletePost((int)drv.Row[0], (string)drv.Row[1]);                   
-                    }
-                    else if (adapters[currentTableIdx] is StaffTableAdapter staffTableAdapter)
-                    {
-                        staffTableAdapter.DeleteStaff((int)drv.Row[0], (string)drv.Row[1], (int)drv.Row[2]);
-                    }
-                }
-            } 
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            UpdateDataGrid();
-            */
-        }
-
-        private void DBDataGrid_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
-        {
-            /*
-            try
-            {
-                dbDataGrid.RowEditEnding -= DBDataGrid_RowEditEnding;
-
-                int lastID = (int)(dbDataGrid.SelectedItem as DataRowView).Row[0];
-
-                dbDataGrid.CommitEdit();
-
-                DataRowView dataRowView = e.Row.Item as DataRowView;
-
-                if (adapters[currentTableIdx] is PostTableAdapter postTableAdapter)
-                {
-                    postTableAdapter.UpdatePost(lastID, (string)dataRowView.Row[1], lastID);
-                }
-                else if (adapters[currentTableIdx] is StaffTableAdapter staffTableAdapter)
-                {
-                    staffTableAdapter.UpdateStaff((string)dataRowView.Row[1], (int)dataRowView[2], lastID);
-                }
-            } 
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            dbDataGrid.RowEditEnding += DBDataGrid_RowEditEnding;
-            */
-        }
-
-        private void EditRecordButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

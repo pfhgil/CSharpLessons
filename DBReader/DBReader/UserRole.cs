@@ -9,8 +9,6 @@ namespace DBReader
     public enum UserRole
     {
         ADMIN,
-        BUYER,
         SELLER,
-        COMMON_USER
     }
 }

@@ -9,31 +9,104 @@
       Title="ReceiptsPage">
 
     <Grid>
-        <DataGrid x:Name="TableDataGrid" Grid.ColumnSpan="5" Grid.Column="0" Grid.Row="1"/>
+        <DataGrid x:Name="TableDataGrid" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="1" SelectionChanged="TableDataGrid_SelectionChanged"/>
 
-        <Button x:Name="NextTableButton" Grid.ColumnSpan="1" Grid.RowSpan="3" Grid.Column="3" Grid.Row="2" Click="NextTableButton_Click">
+        <Button x:Name="NextTableButton" Grid.ColumnSpan="1" Grid.RowSpan="4" Grid.Column="3" Grid.Row="2" Click="NextTableButton_Click">
             <Button.Content>
                 <Image Source="/icons/go_forward50.png"/>
             </Button.Content>
         </Button>
 
-        <Button x:Name="PreviousTableButton" Grid.ColumnSpan="1" Grid.RowSpan="3" Grid.Column="0" Grid.Row="2" Grid.IsSharedSizeScope="False" Click="PreviousTableButton_Click">
+        <Button x:Name="PreviousTableButton" Grid.ColumnSpan="1" Grid.RowSpan="4" Grid.Column="0" Grid.Row="2" Grid.IsSharedSizeScope="False" Click="PreviousTableButton_Click">
             <Button.Content>
                 <Image Source="/icons/go_back50.png" />
             </Button.Content>
         </Button>
 
+        <Button x:Name="ExportReceipt" Content="Выгрузить чек" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1" Grid.Row="2" Click="ExportReceipt_Click"/>
+        <Button x:Name="DeleteRecord" Content="Удалить запись" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1" Grid.Row="4" Click="DeleteRecordButton_Click"/>
 
-        <Button x:Name="CreateRecordButton" Content="Добавить запись" Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="1" Grid.Row="2" Click="CreateRecordButton_Click"/>
-        <Button x:Name="EditRecordButton" Content="Изменить запись" Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="1" Grid.Row="3" Click="EditRecordButton_Click"/>
-        <Button x:Name="DeleteRecord" Content="Удалить запись" Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="1" Grid.Row="4" Click="DeleteRecordButton_Click"/>
-        <ScrollViewer Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+
+        <TabControl x:Name="MainTabControl" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <TabItem Header="Редактирование" Name="EditTabItem"  ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height= "25"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height= "25"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height= "25"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height= "25"/>
+                        <RowDefinition Height= "*"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="5"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width= "*"/>
+                        <ColumnDefinition Width= "25"/>
+                    </Grid.ColumnDefinitions>
+
+                    <ComboBox x:Name="EmployeeComboBox" Grid.Row="1" Grid.Column="1"/>
+
+                    <ComboBox x:Name="FurnitureComboBox" Grid.Row="3" Grid.Column="1"/>
+
+                    <TextBox x:Name="PurchaseAmountTextBox" Grid.Row="5" PreviewTextInput="AmountTextBox_Validate" Grid.Column="1"/>
+
+                    <TextBox x:Name="BuyerMoneyEditTextBox" Grid.Row="7" PreviewTextInput="BuyerMoneyEditTextBox_Validate" Grid.Column="1"/>
+                    
+                    <Button x:Name="ApplyChangesButton" Content="Применить" Grid.Row="9" Grid.Column="1" Click="ApplyChangesButton_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Покупка" Name="ReceiptTabItem" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="20" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+                    </Grid.ColumnDefinitions>
+
+                    <ScrollViewer x:Name="AvailableFurnitureToBuy" Grid.Row="0" Grid.ColumnSpan="5">
+                        <Grid>
+                            <DataGrid x:Name="AvailableFurnitureDataGrid"/>
+                        </Grid>
+                    </ScrollViewer>
+
+                    <Button x:Name="AddFurnitureToReceiptButton" Content="Добавить в чек" Grid.Column="1" Grid.Row="1"  Margin="1" Click="AddFurnitureToReceiptButton_Click"/>
+                    <Button x:Name="RemoveFurnitureFromReceiptButton" Content="Убрать из чека" Grid.Column="3" Grid.Row="1"  Margin="1" Click="RemoveFurnitureFromReceiptButton_Click"/>
+
+                    <ScrollViewer x:Name="FurnitureInReceipt" Grid.Row="2" Grid.ColumnSpan="5">
+                        <Grid>
+                            <DataGrid x:Name="FurnitureInNewReceiptDataGrid"/>
+                        </Grid>
+                    </ScrollViewer>
+
+                    <TextBox x:Name="BuyerMoneyTextBox" Grid.Row="3" Grid.ColumnSpan="3" PreviewTextInput="BuyerMoneyTextBox_Validate" ToolTip="Плата покупателя" Grid.Column="1"/>
+                    
+                    <Button x:Name="AddReceiptButton" Content="Добавить чек" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" Margin="1" Click="AddReceiptButton_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="0"/>
             <RowDefinition Height= "*"/>
             <RowDefinition Height="20"/>
-            <RowDefinition Height= "50"/>
+            <RowDefinition Height= "20"/>
+            <RowDefinition Height= "20"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
