@@ -82,7 +82,7 @@ namespace DBReader
                 Utils.FillComboBoxFromDataGrid(MaterialComboBox, AuthorizationWindow.PagesWindow.MaterialsPage.TableDataGrid, "Name");
 
                 MaterialComboBox.SelectedIndex = Utils.FindIndexInComboBox(MaterialComboBox, dataRow,
-                        (string)AuthorizationWindow.PagesWindow.MaterialsPage.Adapter.GetMaterialByID((int)dataRow.Row["MaterialID"]).Rows[0]["Name"]); ;
+                        (string)AuthorizationWindow.PagesWindow.MaterialsPage.Adapter.GetMaterialByID((int)dataRow.Row["MaterialID"]).Rows[0]["Name"]);
             }
         }
 

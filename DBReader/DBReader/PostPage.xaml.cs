@@ -51,11 +51,6 @@ namespace DBReader
             }
         }
 
-        private void EditRecordButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void DeleteRecordButton_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -112,13 +107,7 @@ namespace DBReader
 
         private void ExportTableButton_Click(object sender, RoutedEventArgs e)
         {
-            CommonOpenFileDialog dialog = new CommonOpenFileDialog() { IsFolderPicker = true };
-            var showRes = dialog.ShowDialog();
-
-            if (showRes == CommonFileDialogResult.Ok)
-            {
-                File.WriteAllText(dialog.FileName + System.IO.Path.DirectorySeparatorChar + Adapter.GetData().TableName + ".json", JsonConvert.SerializeObject(Adapter.GetData(), Formatting.Indented));
-            }
+            Utils.SerializeData(Adapter.GetData().TableName, Adapter.GetData());
         }
 
         private void ImportTableButton_Click(object sender, RoutedEventArgs e)

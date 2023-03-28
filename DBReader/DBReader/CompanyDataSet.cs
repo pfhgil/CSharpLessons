@@ -7,9 +7,12 @@
     }
 }
 
-namespace DBReader.CompanyDataSetTableAdapters {
-    
-    
+namespace DBReader.CompanyDataSetTableAdapters
+{
+    partial class StaffTableAdapter
+    {
+    }
+
     public partial class FurnitureTableAdapter {
     }
 }

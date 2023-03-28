@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -44,6 +47,17 @@ namespace DBReader
             {
                 e.Cancel = true;
             };
+        }
+
+        public static void SerializeData(string fileName, object data)
+        {
+            CommonOpenFileDialog dialog = new CommonOpenFileDialog() { IsFolderPicker = true };
+            var showRes = dialog.ShowDialog();
+
+            if (showRes == CommonFileDialogResult.Ok)
+            {
+                File.WriteAllText(dialog.FileName + System.IO.Path.DirectorySeparatorChar + fileName + ".json", JsonConvert.SerializeObject(data, Formatting.Indented));
+            }
         }
     }
 }

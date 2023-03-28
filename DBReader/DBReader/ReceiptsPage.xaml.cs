@@ -58,11 +58,6 @@ namespace DBReader
             }
         }
 
-        private void CreateRecordButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void DeleteRecordButton_Click(object sender, RoutedEventArgs e)
         {
             try

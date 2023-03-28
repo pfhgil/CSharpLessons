@@ -26,8 +26,6 @@ namespace DBReader
     {
         public FurnitureTableAdapter Adapter { get; } = new FurnitureTableAdapter();
 
-        private Regex allowedRegex = new Regex("^[0-9]+");
-
         public FurniturePage()
         {
             InitializeComponent();
@@ -88,7 +86,7 @@ namespace DBReader
                 Utils.FillComboBoxFromDataGrid(FurnitureTypeComboBox, AuthorizationWindow.PagesWindow.FurnitureTypesPage.TableDataGrid, "Name");
 
                 FurnitureTypeComboBox.SelectedIndex = Utils.FindIndexInComboBox(FurnitureTypeComboBox, dataRow,
-                        (string)AuthorizationWindow.PagesWindow.FurnitureTypesPage.Adapter.GetFurnitureTypeByID((int)dataRow.Row["FurnitureTypeID"]).Rows[0]["Name"]); ;
+                        (string)AuthorizationWindow.PagesWindow.FurnitureTypesPage.Adapter.GetFurnitureTypeByID((int)dataRow.Row["FurnitureTypeID"]).Rows[0]["Name"]);
             }
         }
 

@@ -108,13 +108,7 @@ namespace DBReader
         // МНЕ ПОФИГ НА ПОВТОРЯЮЩИЙСЯ КОД, ЛЕНЬ ЭТО ВСЕ СОКРАЩАТЬ. ПОЙДУ ЛУЧШЕ ПОТРОГАЮ ТРАВУ ***** ИЛИ ЗАЙМУСЬ ДРУГИМИ ДЕЛАМИ ****
         private void ExportTableButton_Click(object sender, RoutedEventArgs e)
         {
-            CommonOpenFileDialog dialog = new CommonOpenFileDialog() { IsFolderPicker = true };
-            var showRes = dialog.ShowDialog();
-
-            if (showRes == CommonFileDialogResult.Ok)
-            {
-                File.WriteAllText(dialog.FileName + System.IO.Path.DirectorySeparatorChar + Adapter.GetData().TableName + ".json", JsonConvert.SerializeObject(Adapter.GetData(), Formatting.Indented));
-            }
+            Utils.SerializeData(Adapter.GetData().TableName, Adapter.GetData());
         }
 
         private void ImportTableButton_Click(object sender, RoutedEventArgs e)
