@@ -134,10 +134,10 @@ namespace DBReader
 
                     TableDataGrid.ItemsSource = Adapter.GetData();
                 }
-                catch
-                {
-                
-                }
+            }
+            catch
+            {
+            
             }
         }
     }
