@@ -113,26 +113,33 @@ namespace DBReader
 
         private void ImportTableButton_Click(object sender, RoutedEventArgs e)
         {
-            CommonOpenFileDialog dialog = new CommonOpenFileDialog();
-
-            var showRes = dialog.ShowDialog();
-
-            if (showRes == CommonFileDialogResult.Ok)
+            try
             {
-                MessageBox.Show(File.ReadAllText(dialog.FileName));
+                CommonOpenFileDialog dialog = new CommonOpenFileDialog();
 
-                List<JObject> deserializedList = JsonConvert.DeserializeObject<List<JObject>>(File.ReadAllText(dialog.FileName));
+                var showRes = dialog.ShowDialog();
 
-                foreach (JObject obj in deserializedList)
+                if (showRes == CommonFileDialogResult.Ok)
                 {
-                    if (Adapter.GetMaterialsSupplierByName((string)obj["Name"]).Rows.Count == 0)
-                    {
-                        Adapter.InsertMaterialsSupplier((string)obj["Name"]);
-                    }
-                }
+                    MessageBox.Show(File.ReadAllText(dialog.FileName));
 
-                TableDataGrid.ItemsSource = Adapter.GetData();
-            }
+                    List<JObject> deserializedList = JsonConvert.DeserializeObject<List<JObject>>(File.ReadAllText(dialog.FileName));
+
+                    foreach (JObject obj in deserializedList)
+                    {
+                        if (Adapter.GetMaterialsSupplierByName((string)obj["Name"]).Rows.Count == 0)
+                        {
+                            Adapter.InsertMaterialsSupplier((string)obj["Name"]);
+                        }
+                    }
+
+                    TableDataGrid.ItemsSource = Adapter.GetData();
+                }
+             }
+             catch
+             {
+             
+             }
         }
     }
 }
