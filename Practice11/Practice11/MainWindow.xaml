@@ -1,0 +1,78 @@
+﻿<Window x:Class="Practice11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice11"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <DatePicker Name="MainDatePicker" Grid.Column="1" SelectedDate="{x:Static sys:DateTime.Now}" SelectedDateChanged="MainDatePicker_SelectedDateChanged"/>
+        <TextBlock Grid.Column="0" Text="Текущая дата:" VerticalAlignment="Center"/>
+
+        <TextBlock Name="ResultTextBlock" Text="Итог: " Grid.Row="5"/>
+
+        <Separator Margin="0,-15,0,0" Grid.Column="0" Grid.Row="0" RenderTransformOrigin="0.5,0.75" Grid.ColumnSpan="25">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+
+        <DataGrid Name="MainDataGrid" Grid.Row="1" Grid.ColumnSpan="3" SelectionChanged="MainDataGrid_SelectionChanged"/>
+
+        <ScrollViewer Grid.Column="3" Grid.Row="1" Grid.RowSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Имя записи" Grid.Row="1" HorizontalAlignment="Center"/>
+                <TextBox Name="RecordNameTextBox" Grid.Row="2"/>
+
+                <TextBlock Text="Тип записи" Grid.Row="4" HorizontalAlignment="Center"/>
+                <ComboBox Name="RecordTypeComboBox" Grid.Row="5"/>
+                <Button Name="AddRecordTypeButton" Content="Создать тип" Grid.Row="6" Click="AddRecordTypeButton_Click"/>
+
+                <TextBlock Text="Сумма" Grid.Row="8" HorizontalAlignment="Center"/>
+                <TextBox Name="RecordSumTextBox" Grid.Row="9"/>
+
+                <Button Name="AddRecordButton" Content="Создать запись" Grid.Row="11" Click="AddRecordButton_Click"/>
+                <Button Name="EditChosenRecordButton" Content="Редактировать запись" Grid.Row="12" Click="EditChosenRecordButton_Click"/>
+                <Button Name="DeleteChosenRecordButton" Content="Удалить записи" Grid.Row="13" Click="DeleteChosenRecordButton_Click"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Window>
