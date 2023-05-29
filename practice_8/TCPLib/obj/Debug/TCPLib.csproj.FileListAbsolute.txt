@@ -1,0 +1,6 @@
+D:\tehnikum\c#\practice_8\TCPLib\bin\Debug\TCPLib.dll
+D:\tehnikum\c#\practice_8\TCPLib\bin\Debug\TCPLib.pdb
+D:\tehnikum\c#\practice_8\TCPLib\obj\Debug\TCPLib.csproj.AssemblyReference.cache
+D:\tehnikum\c#\practice_8\TCPLib\obj\Debug\TCPLib.csproj.CoreCompileInputs.cache
+D:\tehnikum\c#\practice_8\TCPLib\obj\Debug\TCPLib.dll
+D:\tehnikum\c#\practice_8\TCPLib\obj\Debug\TCPLib.pdb

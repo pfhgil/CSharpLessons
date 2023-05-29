@@ -1,0 +1,9 @@
+D:\tehnikum\c#\practice_8\SerializationLib\bin\Debug\SerializationLib.dll
+D:\tehnikum\c#\practice_8\SerializationLib\bin\Debug\SerializationLib.pdb
+D:\tehnikum\c#\practice_8\SerializationLib\bin\Debug\Newtonsoft.Json.dll
+D:\tehnikum\c#\practice_8\SerializationLib\bin\Debug\Newtonsoft.Json.xml
+D:\tehnikum\c#\practice_8\SerializationLib\obj\Debug\SerializationLib.csproj.AssemblyReference.cache
+D:\tehnikum\c#\practice_8\SerializationLib\obj\Debug\SerializationLib.csproj.CoreCompileInputs.cache
+D:\tehnikum\c#\practice_8\SerializationLib\obj\Debug\SerializationLib.csproj.CopyComplete
+D:\tehnikum\c#\practice_8\SerializationLib\obj\Debug\SerializationLib.dll
+D:\tehnikum\c#\practice_8\SerializationLib\obj\Debug\SerializationLib.pdb
